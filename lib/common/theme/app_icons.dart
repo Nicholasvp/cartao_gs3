@@ -11,4 +11,7 @@ class AppIcons {
   static String get cartaoAdicional => 'assets/icons/cartao_adicional.svg';
   static String get seguro => 'assets/icons/seguro.svg';
   static String get email => 'assets/icons/email.svg';
+  static String get celular => 'assets/icons/celular.svg';
+  static String get carro => 'assets/icons/carro.svg';
+  static String get mercado => 'assets/icons/mercado.svg';
 }

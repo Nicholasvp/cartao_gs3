@@ -1,13 +1,15 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+import 'package:cartao_gs3/common/enums/categoria_enums.dart';
+
 class LancamentosModel {
   final String id;
   final String titulo;
   final DateTime datetime;
   final double valor;
-  final String parcelas;
-  final String categoria;
+  final int parcelas;
+  final Categoria categoria;
   LancamentosModel({
     required this.id,
     required this.titulo,
@@ -22,8 +24,8 @@ class LancamentosModel {
     String? titulo,
     DateTime? datetime,
     double? valor,
-    String? parcelas,
-    String? categoria,
+    int? parcelas,
+    Categoria? categoria,
   }) {
     return LancamentosModel(
       id: id ?? this.id,
@@ -42,7 +44,7 @@ class LancamentosModel {
       'datetime': datetime.millisecondsSinceEpoch,
       'valor': valor,
       'parcelas': parcelas,
-      'categoria': categoria,
+      'categoria': categoria.name,
     };
   }
 
@@ -50,10 +52,10 @@ class LancamentosModel {
     return LancamentosModel(
       id: map['id'] as String,
       titulo: map['titulo'] as String,
-      datetime: DateTime.fromMillisecondsSinceEpoch(int.parse(map['datetime'])),
+      datetime: DateTime.fromMillisecondsSinceEpoch(map['datetime'] as int),
       valor: map['valor'] as double,
-      parcelas: map['parcelas'] as String,
-      categoria: map['categoria'] as String,
+      parcelas: map['parcelas'] as int,
+      categoria: fromStringToCategoria(map['categoria']) ?? Categoria.gasto,
     );
   }
 

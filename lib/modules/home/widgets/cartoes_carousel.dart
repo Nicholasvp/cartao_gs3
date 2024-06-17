@@ -18,7 +18,7 @@ class CartoesCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = context.watch<CartaoController>();
     final size = MediaQuery.of(context).size;
-    return ValueListenableBuilder<CardsState>(
+    return ValueListenableBuilder<CartaoState>(
       valueListenable: controller,
       builder: (context, state, _) {
         if (state is CardsLoading) {

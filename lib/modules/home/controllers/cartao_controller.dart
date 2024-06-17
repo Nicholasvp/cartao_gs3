@@ -5,7 +5,7 @@ import 'package:cartao_gs3/modules/home/states/cards_state.dart';
 import 'package:cartao_gs3/modules/home/store/card_store.dart';
 import 'package:cartao_gs3/modules/service/cartao_service.dart';
 
-class CartaoController extends ValueNotifier<CardsState> {
+class CartaoController extends ValueNotifier<CartaoState> {
   CartaoController({
     required this.service,
     required this.store,
@@ -21,5 +21,12 @@ class CartaoController extends ValueNotifier<CardsState> {
     } catch (e) {
       value = CardsError('Erro ao buscar os cartões');
     }
+  }
+
+  bool _isVisible = false;
+  bool get isVisible => _isVisible;
+  set isVisible(bool value) {
+    _isVisible = value;
+    notifyListeners();
   }
 }

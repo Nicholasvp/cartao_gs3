@@ -28,7 +28,7 @@ class AppTheme {
     titleMedium: TextStyle(fontSize: 17.0, fontWeight: FontWeight.w400, letterSpacing: 0.15),
     titleSmall: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500, letterSpacing: 0.1),
     bodyLarge: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w400, letterSpacing: 0.5),
-    bodyMedium: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w400, letterSpacing: 0.25),
+    bodyMedium: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold, letterSpacing: 0.25),
     labelLarge: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold, letterSpacing: 1.25),
     bodySmall: TextStyle(fontSize: 10.0, fontWeight: FontWeight.w400, letterSpacing: 0.4),
     labelSmall: TextStyle(fontSize: 8.0, fontWeight: FontWeight.w400, letterSpacing: 1.5, color: Colors.black),
