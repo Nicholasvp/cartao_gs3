@@ -1,16 +1,16 @@
-# cartao_gs3
+# Cartão GS3
 
-A new Flutter project.
+## Funcionalidades
+- Visualização de transações em tempo real
+- Consulta de saldo disponível
+- Gestão de despesas por categoria
 
-## Getting Started
+## Telas do Aplicativo
 
-This project is a starting point for a Flutter application.
+### Tela Inicial
+![Tela Inicial](./screenshots/tela-inicial.png) ![Caregamento](./screenshots/tela-carregamento.png) ![Mostrando Dados](./screenshots/dados.png)
 
-A few resources to get you started if this is your first Flutter project:
+## Contato
+Para mais informações, entre em contato com [Nicholas Pinheiro](mailto:nicholasvpinheiro@example.com).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
