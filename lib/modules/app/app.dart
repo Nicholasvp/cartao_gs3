@@ -18,11 +18,11 @@ class App extends StatelessWidget {
       providers: [
         Provider(create: (_) => CartaoService()),
         Provider(create: (_) => LancamentosService()),
-        Provider(create: (_) => CardStore()),
+        Provider(create: (_) => CartaoStore()),
         ChangeNotifierProvider(
           create: (context) => CartaoController(
             service: context.read<CartaoService>(),
-            store: context.read<CardStore>(),
+            store: context.read<CartaoStore>(),
           ),
         ),
         ChangeNotifierProvider(

@@ -1,6 +1,7 @@
 import 'package:cartao_gs3/common/theme/app_theme.dart';
 import 'package:cartao_gs3/modules/home/controllers/cartao_controller.dart';
-import 'package:cartao_gs3/modules/home/states/cards_state.dart';
+import 'package:cartao_gs3/modules/home/controllers/lancamentos_controller.dart';
+import 'package:cartao_gs3/modules/home/states/cartao_state.dart';
 import 'package:cartao_gs3/modules/home/widgets/cartao_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +17,11 @@ class CartoesCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = context.watch<CartaoController>();
+    final cartaoController = context.watch<CartaoController>();
+    final lancamentosController = context.watch<LancamentosController>();
     final size = MediaQuery.of(context).size;
     return ValueListenableBuilder<CartaoState>(
-      valueListenable: controller,
+      valueListenable: cartaoController,
       builder: (context, state, _) {
         if (state is CardsLoading) {
           return Shimmer(
@@ -51,8 +53,10 @@ class CartoesCarousel extends StatelessWidget {
               center: true,
               anchor: 1,
               velocityFactor: 0.2,
-              onIndexChanged: (index) {},
-              controller: controller.store.infiniteScrollController,
+              onIndexChanged: (index) {
+                lancamentosController.fetchLancamentos(index);
+              },
+              controller: cartaoController.store.infiniteScrollController,
               axisDirection: Axis.horizontal,
               loop: false,
               itemBuilder: (context, itemIndex, realIndex) {

@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       context.read<CartaoController>().fetchCards();
-      context.read<LancamentosController>().fetchLancamentos();
+      context.read<LancamentosController>().fetchLancamentos(0);
     });
     super.initState();
   }

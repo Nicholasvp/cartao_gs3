@@ -1,5 +1,5 @@
 import 'package:infinite_carousel/infinite_carousel.dart';
 
-class CardStore {
+class CartaoStore {
   final InfiniteScrollController infiniteScrollController = InfiniteScrollController();
 }

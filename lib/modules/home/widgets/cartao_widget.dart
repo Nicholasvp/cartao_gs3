@@ -1,6 +1,6 @@
 import 'package:cartao_gs3/common/theme/app_theme.dart';
 import 'package:cartao_gs3/modules/home/controllers/cartao_controller.dart';
-import 'package:cartao_gs3/modules/home/states/cards_state.dart';
+import 'package:cartao_gs3/modules/home/states/cartao_state.dart';
 import 'package:cartao_gs3/modules/models/cartao_model.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';

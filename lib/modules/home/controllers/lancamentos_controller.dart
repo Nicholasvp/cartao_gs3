@@ -8,10 +8,10 @@ class LancamentosController extends ValueNotifier<LancamentosState> {
   }) : super(LancamentosInitial());
   final LancamentosService service;
 
-  Future<void> fetchLancamentos() async {
+  Future<void> fetchLancamentos(int index) async {
     value = LancamentosLoading();
     try {
-      final lancamentos = await service.fetchLancamentos();
+      final lancamentos = await service.fetchLancamentos(index);
       value = LancamentosLoaded(lancamentos!);
     } catch (e) {
       value = LancamentosError('Erro ao buscar os lançamentos');
